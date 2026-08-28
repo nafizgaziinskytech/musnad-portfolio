@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+/* ==========================================================================
+   Design tokens — fonts + colors. Everything below reads from these instead
+   of hardcoded values, so the whole theme can be re-skinned from one place.
+   Colors are stored as "r g b" triplets so they work both as solid colors
+   (rgb(var(--color-x))) and with alpha (rgb(var(--color-x) / 0.5)), and so
+   Tailwind's own color utilities (configured in index.html) can share them.
+   ========================================================================== */
+:root {
+    /* Fonts */
+    --font-primary: 'Space Grotesk', sans-serif;
+
+    /* Core palette */
+    --color-bg: 10 10 10;              /* #0a0a0a — page background */
+    --color-bg-alt: 12 12 12;          /* #0c0c0c — alternating section background */
+    --color-bg-darker: 5 5 5;          /* #050505 — footer background */
+    --color-white: 255 255 255;
+    --color-black: 0 0 0;
+
+    /* Brand accents */
+    --color-indigo-200: 199 210 254;   /* #c7d2fe */
+    --color-indigo-300: 165 180 252;   /* #a5b4fc */
+    --color-indigo-400: 129 140 248;   /* #818cf8 */
+    --color-indigo-500: 99 102 241;    /* #6366f1 */
+    --color-indigo-600: 79 70 229;     /* #4f46e5 */
+    --color-indigo-700: 67 56 202;     /* #4338ca */
+    --color-purple-400: 192 132 252;   /* #c084fc */
+    --color-purple-500: 168 85 247;    /* #a855f7 */
+    --color-purple-600: 147 51 234;    /* #9333ea */
+
+    /* Neutrals (Tailwind slate scale, used for body copy) */
+    --color-slate-300: 203 213 225;
+    --color-slate-400: 148 163 184;
+    --color-slate-500: 100 116 139;
+    --color-slate-600: 71 85 105;
+}
+
+html {
+    scroll-behavior: auto; /* Lenis handles smoothing */
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: rgb(var(--color-bg));
+    color: rgb(var(--color-white));
+    overflow-x: hidden;
+}
+
+::selection {
+    background: rgb(var(--color-indigo-500));
+    color: rgb(var(--color-white));
+}
+
+/* Reusable background utilities (replace inline hex Tailwind arbitrary values) */
+.bg-surface {
+    background-color: rgb(var(--color-bg-alt));
+}
+
+.bg-surface-darker {
+    background-color: rgb(var(--color-bg-darker));
+}
+
+.hero-glow {
+    background: radial-gradient(circle at 50% 50%, rgb(var(--color-indigo-500) / 0.1), transparent 70%);
+}
+
+/* ---------- Circle Navbar (floats above content, never pushes it) ---------- */
+#circle-navbar {
+    position: fixed;
+    left: -196px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 220px;
+    height: 460px;
+    background: rgb(var(--color-white) / 0.04);
+    backdrop-filter: blur(14px);
+    border-radius: 0 220px 220px 0;
+    border: 1px solid rgb(var(--color-white) / 0.1);
+    z-index: 100;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#circle-navbar:hover {
+    left: 0;
+    background: rgb(var(--color-bg) / 0.55);
+    box-shadow: 0 0 60px rgb(var(--color-indigo-500) / 0.2);
+}
+
+@media (max-width: 767px) {
+    /* Smaller, less intrusive nub so it never sits over section text */
+    #circle-navbar {
+        width: 170px;
+        height: 320px;
+        left: -152px;
+    }
+}
+
+.nav-circle-container {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item {
+    position: absolute;
+    transform-origin: center;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-icon-wrap {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: rgb(var(--color-white) / 0.5);
+    transition: color 0.35s ease, transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), text-shadow 0.35s ease, background 0.35s ease;
+}
+
+.nav-item:hover .nav-icon-wrap,
+.nav-item.active .nav-icon-wrap {
+    color: rgb(var(--color-indigo-300));
+    transform: scale(1.25);
+    text-shadow: 0 0 16px rgb(var(--color-indigo-500) / 0.9);
+    background: rgb(var(--color-indigo-500) / 0.15);
+}
+
+.nav-icon-wrap::after {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    border: 1px solid rgb(var(--color-indigo-500) / 0.5);
+    opacity: 0;
+    transform: scale(0.6);
+    transition: all 0.4s ease;
+}
+
+.nav-item:hover .nav-icon-wrap::after,
+.nav-item.active .nav-icon-wrap::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.nav-label {
+    position: absolute;
+    left: 52px;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgb(var(--color-white));
+    pointer-events: none;
+    display: flex;
+}
+
+.nav-label .letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+/* Visible edge handle */
+.nav-handle {
+    transition: opacity 0.4s ease;
+}
+#circle-navbar:hover .nav-handle {
+    opacity: 0;
+}
+
+/* ---------- Scroll reveal ---------- */
+.reveal {
+    opacity: 0;
+    transform: translateY(48px);
+    will-change: transform, opacity;
+}
+
+.reveal-fade {
+    opacity: 0;
+    will-change: opacity;
+}
+
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.92);
+    will-change: transform, opacity;
+}
+
+/* Life Story Scroll (kept for compatibility) */
+.story-section {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+/* Following Line */
+.experience-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 0;
+    background: linear-gradient(to bottom, rgb(var(--color-indigo-500)), rgb(var(--color-purple-500)));
+    transform: translateX(-50%);
+    box-shadow: 0 0 12px rgb(var(--color-indigo-500) / 0.6);
+}
+
+/* Techy Grid */
+.tech-grid {
+    background-image: radial-gradient(rgb(var(--color-indigo-500) / 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* Gallery Overlay */
+.gallery-item:hover .overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Typing quote */
+.typing-cursor {
+    display: inline-block;
+    width: 3px;
+    margin-left: 4px;
+    background: rgb(var(--color-white));
+    animation: blink-cursor 0.9s steps(1) infinite;
+}
+
+@keyframes blink-cursor {
+    50% { opacity: 0; }
+}
+
+/* Magnetic-ish button hover */
+.btn-glow {
+    position: relative;
+    overflow: hidden;
+}
+.btn-glow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgb(var(--color-white) / 0.25), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.btn-glow:hover::before {
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal, .reveal-fade, .reveal-scale, .story-section {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}

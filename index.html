@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        window.FontAwesomeConfig = {
+          autoReplaceSvg: 'nest'
+        };
+      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musnad E Ahmed — Founder & CEO, SkyTech Solutions</title>
+    <meta name="description" content="Portfolio of Musnad E Ahmed, Founder & CEO of SkyTech Solutions and Joint Secretary-General of BACCO.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Point Tailwind's own indigo / purple / slate utility colors (bg-indigo-500,
+        // text-slate-400, border-indigo-500/30, etc.) at the same CSS variables
+        // defined in styles.css, so every color in the page — Tailwind utilities
+        // included — traces back to one shared set of variables.
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['var(--font-primary)'],
+                    },
+                    colors: {
+                        indigo: {
+                            200: 'rgb(var(--color-indigo-200) / <alpha-value>)',
+                            300: 'rgb(var(--color-indigo-300) / <alpha-value>)',
+                            400: 'rgb(var(--color-indigo-400) / <alpha-value>)',
+                            500: 'rgb(var(--color-indigo-500) / <alpha-value>)',
+                            600: 'rgb(var(--color-indigo-600) / <alpha-value>)',
+                            700: 'rgb(var(--color-indigo-700) / <alpha-value>)',
+                        },
+                        purple: {
+                            400: 'rgb(var(--color-purple-400) / <alpha-value>)',
+                            500: 'rgb(var(--color-purple-500) / <alpha-value>)',
+                            600: 'rgb(var(--color-purple-600) / <alpha-value>)',
+                        },
+                        slate: {
+                            300: 'rgb(var(--color-slate-300) / <alpha-value>)',
+                            400: 'rgb(var(--color-slate-400) / <alpha-value>)',
+                            500: 'rgb(var(--color-slate-500) / <alpha-value>)',
+                            600: 'rgb(var(--color-slate-600) / <alpha-value>)',
+                        },
+                    },
+                },
+            },
+        };
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="tech-grid">
+
+    <!-- Circle Navbar -->
+    <div id="circle-navbar">
+        <div class="nav-circle-container" id="nav-circle">
+            <!-- Items positioned via JS -->
+            <a href="#hero" class="nav-item active" data-label="Home">
+                <span class="nav-icon-wrap"><i class="fa-solid fa-house"></i></span>
+                <span class="nav-label"></span>
+            </a>
+            <a href="#life-story" class="nav-item" data-label="My Story">
+                <span class="nav-icon-wrap"><i class="fa-solid fa-book-open"></i></span>
+                <span class="nav-label"></span>
+            </a>
+            <a href="#experience" class="nav-item" data-label="Experience">
+                <span class="nav-icon-wrap"><i class="fa-solid fa-briefcase"></i></span>
+                <span class="nav-label"></span>
+            </a>
+            <a href="#ventures" class="nav-item" data-label="Ventures">
+                <span class="nav-icon-wrap"><i class="fa-solid fa-rocket"></i></span>
+                <span class="nav-label"></span>
+            </a>
+            <a href="#motive" class="nav-item" data-label="Vision">
+                <span class="nav-icon-wrap"><i class="fa-solid fa-lightbulb"></i></span>
+                <span class="nav-label"></span>
+            </a>
+            <a href="#gallery" class="nav-item" data-label="Gallery">
+                <span class="nav-icon-wrap"><i class="fa-solid fa-image"></i></span>
+                <span class="nav-label"></span>
+            </a>
+            <a href="#blogs" class="nav-item" data-label="Insights">
+                <span class="nav-icon-wrap"><i class="fa-solid fa-pen-nib"></i></span>
+                <span class="nav-label"></span>
+            </a>
+        </div>
+        <!-- Visible edge handle -->
+        <div class="nav-handle absolute right-4 top-1/2 -translate-y-1/2 flex flex-col items-center gap-1 opacity-40">
+            <div class="w-1 h-1 bg-white rounded-full"></div>
+            <div class="w-1 h-8 bg-white rounded-full"></div>
+            <div class="w-1 h-1 bg-white rounded-full"></div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center px-8 overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full hero-glow"></div>
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="space-y-8">
+                <div class="hero-in inline-flex items-center gap-2 px-3 py-1 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-400 text-sm font-medium">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                    </span>
+                    Founder &amp; CEO, SkyTech Solutions
+                </div>
+                <h1 class="hero-in text-6xl md:text-8xl font-bold tracking-tighter leading-none">
+                    BUILDING BANGLADESH'S <br/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500">BPO FUTURE.</span>
+                </h1>
+                <p class="hero-in text-xl text-slate-400 max-w-xl leading-relaxed">
+                    From a call center agent in 2007 to founder of one of Bangladesh's fastest-growing outsourcing companies — leading through technology, policy, and relentless execution.
+                </p>
+                <div class="hero-in flex flex-wrap gap-6 pt-4">
+                    <a href="https://www.linkedin.com/in/musnad/" target="_blank" rel="noopener" class="btn-glow bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-xl font-bold transition-all flex items-center gap-2 group">
+                        Let's Connect <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="#life-story" class="btn-glow border border-white/10 hover:bg-white/5 text-white px-8 py-4 rounded-xl font-bold transition-all">
+                        View My Journey
+                    </a>
+                </div>
+            </div>
+            <div class="relative flex justify-center hero-in">
+                <div class="absolute inset-0 bg-indigo-500/20 blur-[100px] rounded-full"></div>
+                <div class="relative border border-white/10 p-4 rounded-[40px] bg-white/5 backdrop-blur-sm">
+                    <!-- TODO: Replace with a real photo of Musnad E Ahmed -->
+                    <img class="w-full max-w-md h-[550px] object-cover rounded-[30px]" src="Musnad.png" alt="Placeholder portrait — swap for a real photo of Musnad E Ahmed, Founder & CEO of SkyTech Solutions" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Life Story Section (Scrollytelling) -->
+    <section id="life-story" class="py-32 px-8 bg-surface">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-20 text-center reveal">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">A Journey Through Time</h2>
+                <div class="h-1 w-24 bg-indigo-600 mx-auto"></div>
+            </div>
+
+            <div class="space-y-40">
+                <!-- Chapter 1 -->
+                <div class="story-section flex flex-col md:flex-row items-center gap-16">
+                    <div class="w-full md:w-1/2">
+                        <img class="w-full h-[400px] object-cover rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_1d20c30923_49dc554ed8405805.png" alt="Early career call center floor, representing the start of Musnad's career in 2007" />
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <span class="text-indigo-500 font-bold text-xl block mb-4">2007 – 2013</span>
+                        <h3 class="text-3xl font-bold mb-6">The Ground Floor</h3>
+                        <p class="text-slate-400 text-lg leading-relaxed">
+                            Musnad began his career in 2007 as a call center agent — no shortcuts, just the phones. Over the next six years he moved through HMC Technologies, Legato Services Ltd, Digicon Technologies, Symphony Mobile (Edison Group), and Rocket Internet GmbH, rising from agent to operations supervisor, then quality analyst, and eventually Head of Customer Service. Every rung of that ladder shaped how he thinks about customer experience today.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Chapter 2 -->
+                <div class="story-section flex flex-col md:flex-row-reverse items-center gap-16">
+                    <div class="w-full md:w-1/2">
+                        <img class="w-full h-[400px] object-cover rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_7da8a28f45_472eef640aebdfc0.png" alt="Modern office representing the founding of SkyTech Solutions in 2013" />
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <span class="text-indigo-500 font-bold text-xl block mb-4">2013 – 2022</span>
+                        <h3 class="text-3xl font-bold mb-6">Founding SkyTech</h3>
+                        <p class="text-slate-400 text-lg leading-relaxed">
+                            In September 2013, Musnad founded SkyTech Solutions from Uttara, Dhaka, on a simple belief: outsourcing shouldn't only benefit Fortune 500 companies. Nearly a decade later, SkyTech had grown into a 500+ person operation delivering voice, chat, email, and back-office support to clients across the US, Australia, and Canada.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Chapter 3 -->
+                <div class="story-section flex flex-col md:flex-row items-center gap-16">
+                    <div class="w-full md:w-1/2">
+                        <img class="w-full h-[400px] object-cover rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_135fe9a0f0_a8198518635c230d.png" alt="Futuristic workspace representing SkyTech's diversified ventures and BACCO leadership" />
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <span class="text-indigo-500 font-bold text-xl block mb-4">2022 – Present</span>
+                        <h3 class="text-3xl font-bold mb-6">Industry Leadership</h3>
+                        <p class="text-slate-400 text-lg leading-relaxed">
+                            Elected Director of the Bangladesh Association of Contact Center and Outsourcing (BACCO) in 2022 and elevated to Joint Secretary-General in 2024, Musnad now helps shape national policy for the country's outsourcing sector — while growing the SkyTech umbrella into Marketorr, Codezzi, SkyTex, and Agency Handy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section (Following Line) -->
+    <section id="experience" class="py-32 px-8 relative overflow-hidden">
+        <div class="experience-line" id="line"></div>
+        <div class="max-w-5xl mx-auto relative">
+            <div class="text-center mb-32 reveal">
+                <h2 class="text-6xl md:text-8xl font-black text-white/5 absolute -top-12 left-1/2 -translate-x-1/2 whitespace-nowrap">EXPERIENCE</h2>
+                <h2 class="text-4xl md:text-5xl font-bold">Nearly Two Decades Building BPO in Bangladesh</h2>
+            </div>
+
+            <div class="space-y-32">
+                <div class="relative pl-12 md:pl-0 reveal">
+                    <div class="md:grid md:grid-cols-2 gap-24 items-center">
+                        <div class="text-right hidden md:block">
+                            <span class="text-5xl font-bold text-indigo-500">2007</span>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-12 md:-left-12 top-2 w-4 h-4 bg-indigo-500 rounded-full border-4 border-black"></div>
+                            <h4 class="text-2xl font-bold mb-4">The Spark</h4>
+                            <p class="text-slate-400">Began his career as a call center agent, learning the fundamentals of customer experience from the ground up before moving through operations, quality, and CX leadership roles.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative pl-12 md:pl-0 reveal">
+                    <div class="md:grid md:grid-cols-2 gap-24 items-center">
+                        <div class="relative md:text-right">
+                            <div class="absolute -left-12 md:left-auto md:-right-12 top-2 w-4 h-4 bg-indigo-500 rounded-full border-4 border-black"></div>
+                            <h4 class="text-2xl font-bold mb-4">SkyTech Solutions</h4>
+                            <p class="text-slate-400">Founded SkyTech Solutions in Uttara, Dhaka — turning affordable, scalable outsourcing into a mission, and growing it into a 500+ person company serving international clients.</p>
+                        </div>
+                        <div class="text-left hidden md:block">
+                            <span class="text-5xl font-bold text-indigo-500">2013</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative pl-12 md:pl-0 reveal">
+                    <div class="md:grid md:grid-cols-2 gap-24 items-center">
+                        <div class="text-right hidden md:block">
+                            <span class="text-5xl font-bold text-indigo-500">2022</span>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-12 md:-left-12 top-2 w-4 h-4 bg-indigo-500 rounded-full border-4 border-black"></div>
+                            <h4 class="text-2xl font-bold mb-4">BACCO Director</h4>
+                            <p class="text-slate-400">Elected Director of the Bangladesh Association of Contact Center and Outsourcing, contributing to national policy for the country's outsourcing industry.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative pl-12 md:pl-0 reveal">
+                    <div class="md:grid md:grid-cols-2 gap-24 items-center">
+                        <div class="relative md:text-right">
+                            <div class="absolute -left-12 md:left-auto md:-right-12 top-2 w-4 h-4 bg-indigo-500 rounded-full border-4 border-black"></div>
+                            <h4 class="text-2xl font-bold mb-4">Joint Secretary-General</h4>
+                            <p class="text-slate-400">Elevated to Joint Secretary-General of BACCO, driving international collaboration and strengthening the talent pipeline across Bangladesh's digital outsourcing sector.</p>
+                        </div>
+                        <div class="text-left hidden md:block">
+                            <span class="text-5xl font-bold text-indigo-500">2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ventures Section -->
+    <section id="ventures" class="py-32 px-8 bg-surface">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 reveal">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">The SkyTech Ecosystem</h2>
+                    <p class="text-slate-400 max-w-xl">A portfolio of ventures under the SkyTech umbrella, driven by the same core philosophy of affordable outsourcing and operational excellence.</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Venture 1 -->
+                <div class="reveal group bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-indigo-600/10 hover:border-indigo-500/30 transition-all duration-500">
+                    <div class="w-16 h-16 bg-indigo-600/20 rounded-2xl flex items-center justify-center text-indigo-500 mb-8 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-headset text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">SkyTech Solutions</h3>
+                    <p class="text-slate-400 mb-6">The founding company — voice &amp; non-voice customer support, back-office processing, and telemarketing for clients across the US, Australia, and Canada.</p>
+                    <a href="https://www.skytechbpo.com" target="_blank" rel="noopener" class="flex items-center gap-2 text-sm font-bold text-indigo-400">
+                        <span>LEARN MORE</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Venture 2 -->
+                <div class="reveal group bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-purple-600/10 hover:border-purple-500/30 transition-all duration-500">
+                    <div class="w-16 h-16 bg-purple-600/20 rounded-2xl flex items-center justify-center text-purple-500 mb-8 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-bullhorn text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Marketorr</h3>
+                    <p class="text-slate-400 mb-6">A future-driven digital marketing agency serving global brands with campaigns, content, and growth strategy.</p>
+                    <div class="flex items-center gap-2 text-sm font-bold text-purple-400">
+                        <span>LEARN MORE</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Venture 3 -->
+                <div class="reveal group bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-blue-600/10 hover:border-blue-500/30 transition-all duration-500">
+                    <div class="w-16 h-16 bg-blue-600/20 rounded-2xl flex items-center justify-center text-blue-500 mb-8 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-code text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Codezzi</h3>
+                    <p class="text-slate-400 mb-6">A software development and automation company building the tools that power the wider SkyTech ecosystem.</p>
+                    <div class="flex items-center gap-2 text-sm font-bold text-blue-400">
+                        <span>LEARN MORE</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Venture 4 -->
+                <div class="reveal group bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-emerald-600/10 hover:border-emerald-500/30 transition-all duration-500">
+                    <div class="w-16 h-16 bg-emerald-600/20 rounded-2xl flex items-center justify-center text-emerald-500 mb-8 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-layer-group text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Agency Handy</h3>
+                    <p class="text-slate-400 mb-6">A SaaS platform for client and project management, built to help agencies run smoother operations.</p>
+                    <div class="flex items-center gap-2 text-sm font-bold text-emerald-400">
+                        <span>LEARN MORE</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Venture 5 -->
+                <div class="reveal group bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-amber-600/10 hover:border-amber-500/30 transition-all duration-500">
+                    <div class="w-16 h-16 bg-amber-600/20 rounded-2xl flex items-center justify-center text-amber-500 mb-8 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-shirt text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">SkyTex</h3>
+                    <p class="text-slate-400 mb-6">An emerging textile and garment export initiative, extending the SkyTech philosophy into manufacturing.</p>
+                    <div class="flex items-center gap-2 text-sm font-bold text-amber-400">
+                        <span>LEARN MORE</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Motive Section -->
+    <section id="motive" class="py-32 px-8 relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-indigo-600/10 blur-[150px] rounded-full"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h2 class="text-indigo-500 font-bold mb-6 tracking-[0.3em] uppercase reveal">The Future Vision</h2>
+            <h3 class="text-4xl md:text-6xl font-bold leading-tight mb-12 reveal">
+                "We aren't just building companies; we are building ecosystems where <span class="italic text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 underline decoration-indigo-500/30">local talent</span> meets global opportunity."
+            </h3>
+            <p class="text-slate-400 text-xl leading-relaxed max-w-2xl mx-auto reveal">
+                The focus for the next chapter is scaling SkyTech's affiliated ventures — Marketorr, Codezzi, SkyTex, and Agency Handy — while continuing to shape policy through BACCO, so more of Bangladesh's talent can compete on the global outsourcing stage.
+            </p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-32 px-8 bg-surface">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Moments &amp; Milestones</h2>
+                <p class="text-slate-400">A visual record of a journey built one milestone at a time. <span class="text-slate-600">(placeholder images — swap in real photos)</span></p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery 1 -->
+                <div class="reveal-scale gallery-item relative overflow-hidden rounded-3xl h-[400px] cursor-pointer group">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_0f73edc9bb_26770cc9fb09b71d.png" alt="Speaker on stage, representing BPO Summit Bangladesh" />
+                    <div class="overlay absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 transform translate-y-10 transition-all duration-500 flex flex-col justify-end p-8">
+                        <h4 class="text-2xl font-bold mb-2">BPO Summit Bangladesh</h4>
+                        <div class="flex flex-wrap gap-4 text-sm text-slate-300">
+                            <span><i class="fa-solid fa-calendar-days mr-2"></i> June 2026</span>
+                            <span><i class="fa-solid fa-location-dot mr-2"></i> Chattogram, BD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery 2 -->
+                <div class="reveal-scale gallery-item relative overflow-hidden rounded-3xl h-[400px] cursor-pointer group">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_f89c28f49d_d8933cc3d0e1d73d.png" alt="Modern office interior, representing SkyTech Solutions headquarters" />
+                    <div class="overlay absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 transform translate-y-10 transition-all duration-500 flex flex-col justify-end p-8">
+                        <h4 class="text-2xl font-bold mb-2">SkyTech HQ</h4>
+                        <div class="flex flex-wrap gap-4 text-sm text-slate-300">
+                            <span><i class="fa-solid fa-calendar-days mr-2"></i> Since 2013</span>
+                            <span><i class="fa-solid fa-location-dot mr-2"></i> Uttara, Dhaka</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery 3 -->
+                <div class="reveal-scale gallery-item relative overflow-hidden rounded-3xl h-[400px] cursor-pointer group lg:row-span-2 lg:h-full">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_d34677ed93_12a32b361849e1b9.png" alt="Formal recognition on stage, representing BACCO leadership role" />
+                    <div class="overlay absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 transform translate-y-10 transition-all duration-500 flex flex-col justify-end p-8">
+                        <h4 class="text-2xl font-bold mb-2">Joint Secretary-General, BACCO</h4>
+                        <div class="flex flex-wrap gap-4 text-sm text-slate-300">
+                            <span><i class="fa-solid fa-calendar-days mr-2"></i> 2024</span>
+                            <span><i class="fa-solid fa-location-dot mr-2"></i> Dhaka, BD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery 4 -->
+                <div class="reveal-scale gallery-item relative overflow-hidden rounded-3xl h-[400px] cursor-pointer group">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_a6134fe37c_c783eb57c3ead721.png" alt="Focused work session, representing day-to-day operations at SkyTech" />
+                    <div class="overlay absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 transform translate-y-10 transition-all duration-500 flex flex-col justify-end p-8">
+                        <h4 class="text-2xl font-bold mb-2">Elected BACCO Director</h4>
+                        <div class="flex flex-wrap gap-4 text-sm text-slate-300">
+                            <span><i class="fa-solid fa-calendar-days mr-2"></i> 2022</span>
+                            <span><i class="fa-solid fa-location-dot mr-2"></i> Dhaka, BD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery 5 -->
+                <div class="reveal-scale gallery-item relative overflow-hidden rounded-3xl h-[400px] cursor-pointer group">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_4089bd467d_5002980d92862dd5.png" alt="Team strategy meeting, representing SkyTech's leadership team" />
+                    <div class="overlay absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 transform translate-y-10 transition-all duration-500 flex flex-col justify-end p-8">
+                        <h4 class="text-2xl font-bold mb-2">Team Strategy Session</h4>
+                        <div class="flex flex-wrap gap-4 text-sm text-slate-300">
+                            <span><i class="fa-solid fa-calendar-days mr-2"></i> 2023</span>
+                            <span><i class="fa-solid fa-location-dot mr-2"></i> Dhaka, BD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blogs Section -->
+    <section id="blogs" class="py-32 px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-end mb-16 reveal">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Insights &amp; Thoughts</h2>
+                    <p class="text-slate-400">Regular perspectives on Bangladesh's BPO industry, customer experience, and leadership.</p>
+                </div>
+                <a href="#" class="hidden md:block text-indigo-500 font-bold hover:underline">VIEW ALL POSTS <i class="fa-solid fa-arrow-right ml-2"></i></a>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog 1 -->
+                <div class="reveal group cursor-pointer">
+                    <div class="overflow-hidden rounded-2xl mb-6 h-64">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_daef9bca28_be80b84592859e47.png" alt="Abstract data visualization representing the BPO industry" />
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 text-sm text-indigo-400 font-bold">
+                            <span>STRATEGY</span>
+                            <span class="w-1 h-1 bg-slate-600 rounded-full"></span>
+                            <span>5 MIN READ</span>
+                        </div>
+                        <h4 class="text-2xl font-bold group-hover:text-indigo-400 transition-colors">Why Bangladesh's BPO Industry Is Just Getting Started</h4>
+                        <p class="text-slate-400 line-clamp-2">A look at the policy, talent, and infrastructure shifts driving the next decade of outsourcing growth in Bangladesh.</p>
+                    </div>
+                </div>
+
+                <!-- Blog 2 -->
+                <div class="reveal group cursor-pointer">
+                    <div class="overflow-hidden rounded-2xl mb-6 h-64">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="SkyLight Global LLC Logo-01.png" alt="Modern office reflection, representing leadership" />
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 text-sm text-purple-400 font-bold">
+                            <span>LEADERSHIP</span>
+                            <span class="w-1 h-1 bg-slate-600 rounded-full"></span>
+                            <span>8 MIN READ</span>
+                        </div>
+                        <h4 class="text-2xl font-bold group-hover:text-purple-400 transition-colors">From Call Center Agent to CEO: Lessons in CX</h4>
+                        <p class="text-slate-400 line-clamp-2">What eighteen years on the front lines of customer service taught me about building companies people trust.</p>
+                    </div>
+                </div>
+
+                <!-- Blog 3 -->
+                <div class="reveal group cursor-pointer">
+                    <div class="overflow-hidden rounded-2xl mb-6 h-64">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_37772a6ed4_9c01858a0639ff37.png" alt="Sunrise over a city skyline, representing growth" />
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 text-sm text-blue-400 font-bold">
+                            <span>GROWTH</span>
+                            <span class="w-1 h-1 bg-slate-600 rounded-full"></span>
+                            <span>6 MIN READ</span>
+                        </div>
+                        <h4 class="text-2xl font-bold group-hover:text-blue-400 transition-colors">Scaling an Outsourcing Business Without Losing Culture</h4>
+                        <p class="text-slate-400 line-clamp-2">How SkyTech grew from a small Uttara office to a 500+ person company while keeping its founding values intact.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Owner Message Section -->
+    <section id="message" class="py-40 bg-indigo-600 px-8 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div id="message-text" class="text-4xl md:text-6xl font-bold text-white mb-12 min-h-[8rem] md:min-h-[10rem]">
+                <span id="typing-text"></span><span class="typing-cursor">&nbsp;</span>
+            </div>
+            <div class="flex items-center justify-center gap-6 opacity-0 transform translate-y-10" id="message-author">
+                <!-- TODO: Replace with a real photo of Musnad E Ahmed -->
+                <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-4.jpg" class="w-20 h-20 rounded-full border-4 border-white/20 shadow-xl" alt="Placeholder avatar — swap for a real photo of Musnad E Ahmed">
+                <div class="text-left">
+                    <p class="text-xl font-bold text-white">Musnad E Ahmed</p>
+                    <p class="text-indigo-200">Founder &amp; CEO, SkyTech Solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="py-20 px-8 bg-surface-darker border-t border-white/5">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+            <div class="col-span-1 md:col-span-1 space-y-6">
+                <div class="text-2xl font-bold tracking-tighter flex items-center gap-2">
+                    <div class="w-8 h-8 bg-indigo-600 rounded flex items-center justify-center text-sm">ME</div>
+                    MUSNAD E AHMED
+                </div>
+                <p class="text-slate-500 text-sm leading-relaxed">
+                    A digital destination for Bangladesh's BPO industry, entrepreneurship, and technology leadership.
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://www.linkedin.com/in/musnad/" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-indigo-600 transition-colors">
+                        <i class="fa-brands fa-linkedin-in text-sm"></i>
+                    </a>
+                    <a href="https://www.facebook.com/musnad.skytech/" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-indigo-600 transition-colors">
+                        <i class="fa-brands fa-facebook-f text-sm"></i>
+                    </a>
+                    <a href="https://www.skytechbpo.com" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-indigo-600 transition-colors">
+                        <i class="fa-solid fa-globe text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h5 class="font-bold mb-6 text-white uppercase text-xs tracking-widest">Navigation</h5>
+                <ul class="space-y-4 text-slate-400 text-sm">
+                    <li><a href="#hero" class="hover:text-indigo-400 transition-colors">Home</a></li>
+                    <li><a href="#life-story" class="hover:text-indigo-400 transition-colors">Story</a></li>
+                    <li><a href="#experience" class="hover:text-indigo-400 transition-colors">Experience</a></li>
+                    <li><a href="#ventures" class="hover:text-indigo-400 transition-colors">Ventures</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h5 class="font-bold mb-6 text-white uppercase text-xs tracking-widest">Resources</h5>
+                <ul class="space-y-4 text-slate-400 text-sm">
+                    <li><a href="#blogs" class="hover:text-indigo-400 transition-colors">Insights</a></li>
+                    <li><a href="#gallery" class="hover:text-indigo-400 transition-colors">Gallery</a></li>
+                    <li><a href="https://www.skytechbpo.com" target="_blank" rel="noopener" class="hover:text-indigo-400 transition-colors">SkyTech Solutions</a></li>
+                    <li><a href="#" class="hover:text-indigo-400 transition-colors">Speaking</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h5 class="font-bold mb-6 text-white uppercase text-xs tracking-widest">Connect</h5>
+                <p class="text-slate-400 text-sm mb-6">Get occasional updates on Bangladesh's BPO industry and SkyTech's journey.</p>
+                <div class="flex gap-2">
+                    <input type="email" placeholder="Email address" class="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm w-full focus:outline-none focus:border-indigo-500 transition-colors">
+                    <button class="bg-indigo-600 px-4 py-2 rounded-lg text-sm font-bold">JOIN</button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 text-center text-slate-600 text-xs">
+            &copy; 2026 Musnad E Ahmed. Handcrafted with precision. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
